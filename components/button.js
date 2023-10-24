@@ -13,7 +13,7 @@ const Button = ({
     <View className="flex flex-col items-center gap-8">
       <Pressable
         onPress={onPrimaryBtnPress}
-        className="py-3 bg-bgPurple px-7 rounded-xl w-[267px] h-[61px] flex items-center justify-center"
+        className="py-3 bg-bgPurple px-7 rounded-xl w-[267px] max-h-[61px] flex items-center justify-center"
       >
         <Text className="text-xl font-exoSemibold text-center text-bgWhite">
           {primaryBtnText}

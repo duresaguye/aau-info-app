@@ -12,7 +12,7 @@ const Input = ({ label, placeholder, last = false, Icon }) => {
       <View className="flex flex-row items-center justify-between px-4 bg-white h-12 rounded-lg shadow">
         <TextInput
           className={
-            'font-exo flex text-darkGrayText text-sm h-full w-full bg-white rounded-lg'
+            'font-exo flex items-center text-darkGrayText text-sm h-full w-full bg-white rounded-lg'
           }
           placeholder={placeholder}
           secureTextEntry={label === 'Password'}

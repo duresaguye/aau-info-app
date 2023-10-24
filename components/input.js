@@ -1,7 +1,7 @@
 import { Text, TextInput, View } from 'react-native';
 import React from 'react';
 
-const Input = ({ label, placeholder, last = false, Icon }) => {
+const Input = ({ label, placeholder, last = false, Icon, value, onChange }) => {
   return (
     <View
       className={`flex flex-col gap-2 relative w-full ${last ? '' : 'mb-5'}`}
@@ -16,6 +16,8 @@ const Input = ({ label, placeholder, last = false, Icon }) => {
             'font-exo flex items-center text-darkGrayText text-sm h-full w-full bg-white rounded-lg'
           }
           placeholder={placeholder}
+          value={value}
+          onChangeText={onChange}
           secureTextEntry={label === 'Password'}
         />
         {/** ====================== Optional Icon ============================= */}

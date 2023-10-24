@@ -9,6 +9,7 @@ const Input = ({ label, placeholder, last = false, Icon }) => {
       <Text className="font-exo font-semibold text-darkGrayText text-base">
         {label}
       </Text>
+      {/** ====================== Text Input ============================= */}
       <View className="flex flex-row items-center justify-between px-4 bg-white h-12 rounded-lg shadow">
         <TextInput
           className={
@@ -17,6 +18,7 @@ const Input = ({ label, placeholder, last = false, Icon }) => {
           placeholder={placeholder}
           secureTextEntry={label === 'Password'}
         />
+        {/** ====================== Optional Icon ============================= */}
         {Boolean(Icon) ? (
           <Icon
             className="text-lightGrayText absolute right-0 mr-4"

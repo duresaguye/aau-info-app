@@ -14,9 +14,12 @@ export default function SignInScreen() {
   return (
     <SafeAreaView className="flex-1 bg-bgWhite px-8">
       <View className="flex-1 flex justify-around my-4">
+        {/** ====================== Image ============================= */}
         <View className="flex-row justify-center mb-[-15%]">
           <Image source={signin} style={{ width: 266, height: 266 }} />
         </View>
+
+        {/** ====================== Sign In inputs ============================= */}
         <View className="flex flex-col w-full items-center justify-center mt-3">
           <Input label={'Email address'} placeholder={'name@example.com'} />
           <Input
@@ -27,6 +30,7 @@ export default function SignInScreen() {
           />
         </View>
 
+        {/** ====================== Action button ============================= */}
         <Button
           primaryBtnText={'Sign In'}
           onPrimaryBtnPress={() => navigation.navigate('Home')}

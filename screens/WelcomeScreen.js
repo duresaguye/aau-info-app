@@ -13,9 +13,12 @@ export default function WelcomeScreen() {
   return (
     <SafeAreaView className="flex-1 bg-bgWhite">
       <View className="flex-1 flex justify-around my-4">
+        {/** ====================== Image =================================== */}
         <View className="flex-row justify-center">
           <Image source={welcome} style={{ width: 324, height: 324 }} />
         </View>
+
+        {/** ====================== Welcome Text ============================= */}
         <View className="flex flex-col gap-2 mt-[-25%]">
           <Text className="text-darkGrayText text-xl text-center font-exoSemibold">
             {welcomeScreenData.title}
@@ -25,6 +28,7 @@ export default function WelcomeScreen() {
           </Text>
         </View>
 
+        {/** ====================== Action button ============================= */}
         <Button
           primaryBtnText={'Sign Up'}
           onPrimaryBtnPress={() => navigation.navigate('SignUp')}

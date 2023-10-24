@@ -14,20 +14,23 @@ export default function SignUpScreen() {
   return (
     <SafeAreaView className="flex-1 bg-bgWhite px-8">
       <View className="flex-1 flex justify-around">
+        {/** ====================== Image ============================= */}
         <View className="flex-row justify-center mb-[-15%] mt-[-10%]">
           <Image source={signup} style={{ width: 353, height: 235 }} />
         </View>
+        {/** ====================== Sign Up inputs ============================= */}
         <View className="flex flex-col w-full items-center justify-center mt-3">
           <Input label={'Name'} placeholder={'Your name'} />
           <Input label={'Email address'} placeholder={'name@example.com'} />
           <Input
             label={'Password'}
-            placeholder={'********'}
+            placeholder={'**********'}
             Icon={EyeIcon}
             last
           />
         </View>
 
+        {/** ====================== Action button ============================= */}
         <Button
           primaryBtnText={'Sign In'}
           onPrimaryBtnPress={() => navigation.navigate('Home')}

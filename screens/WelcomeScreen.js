@@ -29,7 +29,7 @@ export default function WelcomeScreen() {
           primaryBtnText={'Sign Up'}
           onPrimaryBtnPress={() => navigation.navigate('SignUp')}
           secondaryBtnText2={'Skip'}
-          onSecondaryBtnPress={() => navigation.navigate('Login')}
+          onSecondaryBtnPress={() => navigation.navigate('SignIn')}
         />
       </View>
     </SafeAreaView>

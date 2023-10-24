@@ -3,5 +3,6 @@ export const themeColors = {
   bgPurple: '#5667FD',
   bgLightGray: '#EDEDED',
   bgWhite: '#F4F5F9',
-  grayText: '#636D77',
+  lightGrayText: '#636D77',
+  darkGrayText: '#364356',
 };

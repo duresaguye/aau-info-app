@@ -30,11 +30,11 @@ export default function SignUpScreen() {
           />
         </View>
 
-        {/** ====================== Action button ============================= */}
+        {/** ====== Action button -> Navigation to grade selection screen ======= */}
         <Button
-          primaryBtnText={'Sign In'}
-          onPrimaryBtnPress={() => navigation.navigate('Home')}
-          secondaryBtnText1={"Don't have an account?"}
+          primaryBtnText={'Sign Up'}
+          onPrimaryBtnPress={() => navigation.navigate('SelectGrade')}
+          secondaryBtnText1={'Already have an account?'}
           secondaryBtnText2={'Sign In'}
           onSecondaryBtnPress={() => navigation.navigate('SignIn')}
         />

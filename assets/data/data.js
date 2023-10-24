@@ -9,3 +9,15 @@ export const gradesData = [
   'Grade 10-11',
   'Grade 12-13',
 ];
+
+export const provincesData = [
+  'Central',
+  'Eastern',
+  'North Central',
+  'northern',
+  'north western',
+  'sabaragamuwa',
+  'southern',
+  'uva',
+  'western',
+];

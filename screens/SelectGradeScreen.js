@@ -5,8 +5,10 @@ import SubjectPicker from '../components/subjectSelector';
 import { gradesData } from '../assets/data/data';
 import HeaderText from '../components/headerText';
 import Button from '../components/button';
+import { useNavigation } from '@react-navigation/native';
 
 const SelectGradeScreen = () => {
+  const navigation = useNavigation();
   return (
     <SafeAreaView className="px-7 py-8">
       {/** ============== Header text component =========== */}
@@ -20,12 +22,12 @@ const SelectGradeScreen = () => {
       </View>
 
       {/** ========= Action button ================== */}
-      <View className="mt-[50%]">
+      <View className="mt-[40%]">
         <Button
           primaryBtnText={'Next'}
-          onPrimaryBtnPress={() => navigation.navigate('SignUp')}
+          onPrimaryBtnPress={() => navigation.navigate('SelectProvince')}
           secondaryBtnText2={'Skip'}
-          onSecondaryBtnPress={() => navigation.navigate('SignIn')}
+          onSecondaryBtnPress={() => navigation.navigate('SelectProvince')}
         />
       </View>
     </SafeAreaView>

@@ -138,13 +138,17 @@ export default function HomeScreen() {
 
           {/**============== Institution Filters ==================== */}
           {institutionsFilterVisible ? (
-            <View className="flex flex-col my-5 space-y-2">
+            <View className="flex flex-col mt-5 space-y-2">
               <AreaFilter filters={areaFilters} />
             </View>
           ) : null}
 
           {/** ========================= Render List of institutions =========================== */}
-          <View className="w-full pt-4 bg-transparent">
+          <View
+            className={`w-full bg-transparent ${
+              institutionsFilterVisible ? 'pt-0' : 'pt-4'
+            }`}
+          >
             {institutionData.map((institution, index) => (
               <InstitutionItem institution={institution} key={index} />
             ))}

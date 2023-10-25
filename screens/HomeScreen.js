@@ -61,11 +61,10 @@ export default function HomeScreen() {
 
     // Filter the teachers based on the selected subject
     const filteredTeachers = teacherData.filter((teacher) => {
-      return (
-        subject === 'All Subjects' ||
-        subject === 'Science for Technology' ||
-        teacher.subject === subject
-      );
+      return subject.toLowerCase() === 'all subjects' ||
+        subject.toLowerCase() === 'science for technology'
+        ? subject
+        : teacher.subject.toLowerCase() === subject.toLowerCase();
     });
 
     setTeachers(filteredTeachers); // Update the filtered list of teachers

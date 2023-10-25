@@ -22,7 +22,7 @@ const SelectGradeScreen = () => {
       </View>
 
       {/** ========= Action button ================== */}
-      <View className={Platform.OS === 'ios' ? 'mt-[35%]' : 'mt-[10%]'}>
+      <View className={Platform.OS === 'ios' ? 'mt-[30%]' : 'mt-[10%]'}>
         <Button
           primaryBtnText={'Next'}
           onPrimaryBtnPress={() => navigation.navigate('SelectProvince')}

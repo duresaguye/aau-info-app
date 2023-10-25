@@ -1,7 +1,7 @@
 Certainly, here's a sample README.md for your GitHub repository:
 
 # Education App for the Senior React Native Developer Assignment
-[Home Screen](https://i.imgur.com/gZgeRnZ.png)
+https://i.imgur.com/gZgeRnZ.png
 
 
 Welcome to my Senior React Native Developer Assignment repository. This repository contains the code and assets for the mobile application based on the provided Figma design.

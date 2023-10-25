@@ -11,6 +11,7 @@ import school3 from './images/school3.png';
 import teacher1 from './images/teacher1.png';
 import teacher2 from './images/teacher2.png';
 import teacher3 from './images/teacher3.png';
+import teacher4 from './images/teacher4.png';
 import avatar from './images/avatar.png';
 import streamIcon from './images/streamIcon.png';
 import exploreIcon from './images/exploreIcon.png';
@@ -30,6 +31,7 @@ export const images = {
   teacher1,
   teacher2,
   teacher3,
+  teacher4,
   avatar,
   streamIcon,
   exploreIcon,

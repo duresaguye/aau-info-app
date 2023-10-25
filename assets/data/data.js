@@ -1,6 +1,6 @@
 import { images } from '..';
 
-const { teacher1, teacher2, teacher3 } = images;
+const { teacher1, teacher2, teacher3, teacher4 } = images;
 export const welcomeScreenData = {
   title: `Let's find the "A" with us`,
   subtitle: `Please Sign in to view personalized recommendations`,
@@ -29,16 +29,21 @@ export const teacherData = [
   {
     name: 'Cassie Valdez',
     subject: 'Biology',
-    image: teacher2,
+    image: teacher1,
   },
   {
     name: 'Paul Simmons',
     subject: 'Chemistry',
-    image: teacher1,
+    image: teacher2,
   },
   {
     name: 'Simon Patrick',
     subject: 'Computer Science',
+    image: teacher4,
+  },
+  {
+    name: 'Graham Osbor',
+    subject: 'Physics',
     image: teacher3,
   },
 ];

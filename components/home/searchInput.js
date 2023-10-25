@@ -16,7 +16,7 @@ const SearchInput = ({ placeholder, Icon, value, onChange }) => {
         />
         {/** ====================== Search Icon ============================= */}
 
-        <View className="absolute right-0 mr-[2.5%] flex items-center justify-center p-2 bg-bgPurple rounded-lg">
+        <View className="absolute right-0 mr-[2.5%] flex items-center justify-center px-1 py-2 bg-bgPurple rounded-lg">
           <Icon className="text-white" size={20} />
         </View>
       </View>

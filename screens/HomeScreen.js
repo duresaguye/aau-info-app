@@ -1,4 +1,11 @@
-import { View, Text, Image, Pressable } from 'react-native';
+import {
+  View,
+  Text,
+  Image,
+  Pressable,
+  FlatList,
+  ScrollView,
+} from 'react-native';
 import React, { useState } from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import HeaderText from '../components/headerText';
@@ -11,6 +18,8 @@ import {
 } from 'react-native-heroicons/outline';
 import { FunnelIcon } from 'react-native-heroicons/solid';
 import { themeColors } from '../theme';
+import TeacherItem from '../components/home/teacherItem';
+import { teacherData } from '../assets/data/data';
 
 const { avatar } = images;
 
@@ -62,7 +71,15 @@ export default function HomeScreen() {
         </View>
 
         {/** ========================= Render List of Teachers =========================== */}
-        <View className=""></View>
+
+        <FlatList
+          data={teacherData}
+          horizontal={true}
+          className="w-full py-4 bg-transparent"
+          renderItem={({ item }) => <TeacherItem teacher={item} />}
+          keyExtractor={(item, index) => item.name}
+          showsHorizontalScrollIndicator={false}
+        />
       </View>
 
       {/** ========================= Institutions Section =========================== */}

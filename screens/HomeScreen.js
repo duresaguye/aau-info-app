@@ -4,7 +4,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import HeaderText from '../components/headerText';
 import { getLocalGreeting } from '../utils/helpers';
 import { images } from '../assets';
-import SearchInput from '../components/searchInput';
+import SearchInput from '../components/home/searchInput';
 import {
   MagnifyingGlassIcon,
   AdjustmentsVerticalIcon,
@@ -50,11 +50,26 @@ export default function HomeScreen() {
         </Pressable>
       </View>
 
-      {/** ========================= Teacher's Section =========================== */}
+      {/** ========================= Teachers Section =========================== */}
       <View className="mt-2">
         <View className="flex flex-row items-center justify-between">
           <Text className="font-exoSemibold text-lg capitalize">
             Popular Teachers
+          </Text>
+          <Pressable className="">
+            <FunnelIcon size={28} color={themeColors.darkGrayText} />
+          </Pressable>
+        </View>
+
+        {/** ========================= Render List of Teachers =========================== */}
+        <View className=""></View>
+      </View>
+
+      {/** ========================= Institutions Section =========================== */}
+      <View className="mt-2">
+        <View className="flex flex-row items-center justify-between">
+          <Text className="font-exoSemibold text-lg capitalize">
+            Popular Institutions
           </Text>
           <Pressable className="">
             <FunnelIcon size={28} color={themeColors.darkGrayText} />

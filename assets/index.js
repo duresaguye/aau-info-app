@@ -12,6 +12,9 @@ import teacher1 from './images/teacher1.png';
 import teacher2 from './images/teacher2.png';
 import teacher3 from './images/teacher3.png';
 import avatar from './images/avatar.png';
+import streamIcon from './images/streamIcon.png';
+import exploreIcon from './images/exploreIcon.png';
+import classWorkIcon from './images/classWorkIcon.png';
 
 export const images = {
   microscope,
@@ -28,4 +31,7 @@ export const images = {
   teacher2,
   teacher3,
   avatar,
+  streamIcon,
+  exploreIcon,
+  classWorkIcon,
 };

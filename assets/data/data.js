@@ -1,3 +1,6 @@
+import { images } from '..';
+
+const { teacher1, teacher2, teacher3 } = images;
 export const welcomeScreenData = {
   title: `Let's find the "A" with us`,
   subtitle: `Please Sign in to view personalized recommendations`,
@@ -20,4 +23,22 @@ export const provincesData = [
   'southern',
   'uva',
   'western',
+];
+
+export const teacherData = [
+  {
+    name: 'Cassie Valdez',
+    subject: 'Biology',
+    image: teacher2,
+  },
+  {
+    name: 'Paul Simmons',
+    subject: 'Chemistry',
+    image: teacher1,
+  },
+  {
+    name: 'Simon Patrick',
+    subject: 'Computer Science',
+    image: teacher3,
+  },
 ];

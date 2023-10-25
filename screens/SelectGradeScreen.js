@@ -1,4 +1,4 @@
-import { Text, View } from 'react-native';
+import { Platform, Text, View } from 'react-native';
 import React from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import SubjectPicker from '../components/subjectSelector';
@@ -22,7 +22,7 @@ const SelectGradeScreen = () => {
       </View>
 
       {/** ========= Action button ================== */}
-      <View className="mt-[35%]">
+      <View className={Platform.OS === 'ios' ? 'mt-[35%]' : 'mt-[10%]'}>
         <Button
           primaryBtnText={'Next'}
           onPrimaryBtnPress={() => navigation.navigate('SelectProvince')}

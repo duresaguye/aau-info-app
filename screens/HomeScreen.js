@@ -87,14 +87,16 @@ export default function HomeScreen() {
     setSelectedSubject(subject);
 
     // Filter the teachers based on the selected subject
-    const filteredTeachers = teacherData.filter((teacher) => {
-      return subject.toLowerCase() === 'all subjects' ||
-        subject.toLowerCase() === 'science for technology'
-        ? subject
-        : teacher.subject.toLowerCase() === subject.toLowerCase();
-    });
-
-    setTeachers(filteredTeachers); // Update the filtered list of teachers
+    if (subject.toLowerCase() === 'all subjects') {
+      setTeachers(teacherData); // Show all teachers when 'All Subjects' is selected
+    } else if (subject.toLowerCase() === 'science for technology') {
+      setTeachers(teacherData);
+    } else {
+      const filteredTeachers = teacherData.filter(
+        (teacher) => teacher.subject.toLowerCase() === subject.toLowerCase()
+      );
+      setTeachers(filteredTeachers);
+    }
   };
 
   return (

@@ -53,9 +53,6 @@ These instructions will help you get the project up and running on your local ma
 ![Home Screen](https://i.imgur.com/gZgeRnZ.png)
 
 
-
-![Imgur](https://i.imgur.com/gZgeRnZ.png)
-
 ## License
 
 This project is licensed under the [MIT License](LICENSE).

@@ -19,14 +19,22 @@ import {
 import { FunnelIcon } from 'react-native-heroicons/solid';
 import { themeColors } from '../theme';
 import TeacherItem from '../components/home/teacherItem';
-import { institutionData, teacherData } from '../assets/data/data';
+import {
+  areaFilters,
+  institutionData,
+  subjectFilters,
+  teacherData,
+} from '../assets/data/data';
 import InstitutionItem from '../components/home/institutionItem';
 import SectionHeader from '../components/home/sectionHeader';
+import AreaFilter from '../components/home/areaFilter';
+import SubjectFilter from '../components/home/subjectFilter';
 
 const { avatar } = images;
 
 export default function HomeScreen() {
   const [searchQuery, setSearchQuery] = useState('');
+  const [teachers, setTeachers] = useState(teacherData);
   const [teachersFilterVisible, setTeachersFilterVisible] = useState(false);
   const [institutionsFilterVisible, setInstitutionsFilterVisible] =
     useState(false);
@@ -88,13 +96,26 @@ export default function HomeScreen() {
         <View className="mt-2">
           <SectionHeader
             title={'Popular Teachers'}
-            onFilterPress={() => console.warn('press')}
+            onFilterPress={toggleTeachersFilter}
+            tintColor={
+              teachersFilterVisible
+                ? themeColors.bgPurple
+                : themeColors.lightGrayText
+            }
           />
+
+          {/**============== Teacher Filters ==================== */}
+          {teachersFilterVisible ? (
+            <View className="flex flex-col my-5 space-y-2">
+              <AreaFilter filters={areaFilters} />
+              <SubjectFilter filters={subjectFilters} />
+            </View>
+          ) : null}
 
           {/** ========================= Render List of Teachers =========================== */}
 
           <FlatList
-            data={teacherData}
+            data={teachers}
             horizontal={true}
             className="w-full py-4 bg-transparent"
             renderItem={({ item }) => <TeacherItem teacher={item} />}
@@ -107,7 +128,12 @@ export default function HomeScreen() {
         <View className="mt-2">
           <SectionHeader
             title={'Popular Institutions'}
-            onFilterPress={() => console.warn('press')}
+            onFilterPress={toggleInstitutionsFilter}
+            tintColor={
+              institutionsFilterVisible
+                ? themeColors.bgPurple
+                : themeColors.lightGrayText
+            }
           />
 
           {/** ========================= Render List of institutions =========================== */}

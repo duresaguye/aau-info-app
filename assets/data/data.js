@@ -78,3 +78,13 @@ export const institutionData = [
     image: school3,
   },
 ];
+
+export const areaFilters = ['Island', 'Province', 'Districts'];
+
+export const subjectFilters = [
+  'All Subects',
+  'Biology',
+  'Chemistry',
+  'Physics',
+  'Science for Technology',
+];

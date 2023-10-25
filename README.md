@@ -45,6 +45,13 @@ These instructions will help you get the project up and running on your local ma
 6. **View on Device:** Scan the QR code with the Expo Go app on your mobile device to see the application in action.
 
 ## Screenshots
+![SIgn_In_Screens](https://github.com/mxnuchim/React-Native-Education-App/assets/55309494/4b41b83b-9bb0-4295-a211-55d9df9adc5e)
+![SIgn_Up_Screens](https://github.com/mxnuchim/React-Native-Education-App/assets/55309494/bb43d835-a24e-41f3-b57b-4575060ceadd)
+
+
+![Home_Screen](https://github.com/mxnuchim/React-Native-Education-App/assets/55309494/e49943cc-deeb-491e-b92e-2096611d2575)
+
+
 
 ## License
 

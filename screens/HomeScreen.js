@@ -35,6 +35,7 @@ const { avatar } = images;
 export default function HomeScreen() {
   const [searchQuery, setSearchQuery] = useState('');
   const [teachers, setTeachers] = useState(teacherData);
+  const [SelectedSubject, setSelectedSubject] = useState();
   const [teachersFilterVisible, setTeachersFilterVisible] = useState(false);
   const [institutionsFilterVisible, setInstitutionsFilterVisible] =
     useState(false);
@@ -53,6 +54,23 @@ export default function HomeScreen() {
     console.log(text);
     setSearchQuery(text);
   };
+
+  // Function to filter teachers based on the selected subject
+  const filterTeachersBySubject = (subject) => {
+    setSelectedSubject(subject);
+
+    // Filter the teachers based on the selected subject
+    const filteredTeachers = teacherData.filter((teacher) => {
+      return (
+        subject === 'All Subjects' ||
+        subject === 'Science for Technology' ||
+        teacher.subject === subject
+      );
+    });
+
+    setTeachers(filteredTeachers); // Update the filtered list of teachers
+  };
+
   return (
     <SafeAreaView className="bg-bgWhite px-7 pt-5 pb-[-35px] flex-1">
       {/**============= Header Area =================== */}
@@ -73,7 +91,7 @@ export default function HomeScreen() {
             <Image source={avatar} style={{ height: 62, width: 62 }} />
           </View>
         </View>
-        {/** ================ Search Input & Filters ========================= */}
+        {/** ================ Search Input  ========================= */}
         <View className="flex flex-row items-center justify-between my-7">
           <View className="flex-1">
             <SearchInput
@@ -108,7 +126,10 @@ export default function HomeScreen() {
           {teachersFilterVisible ? (
             <View className="flex flex-col my-5 space-y-2">
               <AreaFilter filters={areaFilters} />
-              <SubjectFilter filters={subjectFilters} />
+              <SubjectFilter
+                filters={subjectFilters}
+                onSubjectSelect={filterTeachersBySubject}
+              />
             </View>
           ) : null}
 

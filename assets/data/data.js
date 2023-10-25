@@ -82,7 +82,7 @@ export const institutionData = [
 export const areaFilters = ['Island', 'Province', 'Districts'];
 
 export const subjectFilters = [
-  'All Subects',
+  'All Subjects',
   'Biology',
   'Chemistry',
   'Physics',

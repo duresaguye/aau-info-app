@@ -2,8 +2,14 @@ import { View, Text } from 'react-native';
 import React, { useState } from 'react';
 import FilterItem from './filterItem';
 
-const SubjectFilter = ({ filters }) => {
+const SubjectFilter = ({ filters, onSubjectSelect }) => {
   const [selected, setSelected] = useState(filters[0]);
+
+  const handleSubjectSelect = (subject) => {
+    setSelected(subject);
+    onSubjectSelect(subject); // Notify the parent component of a change
+  };
+
   return (
     <View className="">
       <Text className="font-exoSemibold text-darkGrayText text-xs capitalize ">
@@ -15,7 +21,7 @@ const SubjectFilter = ({ filters }) => {
             key={item}
             item={item}
             selected={selected}
-            setSelected={setSelected}
+            setSelected={handleSubjectSelect}
           />
         ))}
       </View>

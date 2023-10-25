@@ -10,7 +10,7 @@ const TeacherItem = ({ teacher }) => {
       </View>
       {/**============== Teacher's Name and subject ================ */}
       <View className="mt-2">
-        <Text className="font-exoSemibold text-base capitalize">
+        <Text className="font-exoSemibold text-base capitalize text-darkGrayText">
           {teacher.name}
         </Text>
         <Text className="font-exo text-xs">{teacher.subject}</Text>

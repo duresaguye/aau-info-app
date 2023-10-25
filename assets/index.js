@@ -16,6 +16,7 @@ import avatar from './images/avatar.png';
 import streamIcon from './images/streamIcon.png';
 import exploreIcon from './images/exploreIcon.png';
 import classWorkIcon from './images/classWorkIcon.png';
+import funnel from './images/funnel.png';
 
 export const images = {
   microscope,
@@ -36,4 +37,5 @@ export const images = {
   streamIcon,
   exploreIcon,
   classWorkIcon,
+  funnel,
 };

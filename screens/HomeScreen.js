@@ -21,11 +21,25 @@ import { themeColors } from '../theme';
 import TeacherItem from '../components/home/teacherItem';
 import { institutionData, teacherData } from '../assets/data/data';
 import InstitutionItem from '../components/home/institutionItem';
+import SectionHeader from '../components/home/sectionHeader';
 
 const { avatar } = images;
 
 export default function HomeScreen() {
   const [searchQuery, setSearchQuery] = useState('');
+  const [teachersFilterVisible, setTeachersFilterVisible] = useState(false);
+  const [institutionsFilterVisible, setInstitutionsFilterVisible] =
+    useState(false);
+
+  // Function to toggle the teachers filter visibility
+  const toggleTeachersFilter = () => {
+    setTeachersFilterVisible(!teachersFilterVisible);
+  };
+
+  // Function to toggle the institutions filter visibility
+  const toggleInstitutionsFilter = () => {
+    setInstitutionsFilterVisible(!institutionsFilterVisible);
+  };
 
   const handleSearchChange = (text) => {
     console.log(text);
@@ -40,6 +54,7 @@ export default function HomeScreen() {
       >
         <View className="flex flex-row items-center justify-between">
           <View className="">
+            {/** Get greeting based on current time */}
             <HeaderText text={getLocalGreeting()} />
             <Text className="font-exo font-semibold text-lg">
               Hardline Scott
@@ -71,14 +86,10 @@ export default function HomeScreen() {
 
         {/** ========================= Teachers Section =========================== */}
         <View className="mt-2">
-          <View className="flex flex-row items-center justify-between">
-            <Text className="font-exoSemibold text-lg capitalize">
-              Popular Teachers
-            </Text>
-            <Pressable className="">
-              <FunnelIcon size={28} color={themeColors.darkGrayText} />
-            </Pressable>
-          </View>
+          <SectionHeader
+            title={'Popular Teachers'}
+            onFilterPress={() => console.warn('press')}
+          />
 
           {/** ========================= Render List of Teachers =========================== */}
 
@@ -94,14 +105,10 @@ export default function HomeScreen() {
 
         {/** ========================= Institutions Section =========================== */}
         <View className="mt-2">
-          <View className="flex flex-row items-center justify-between">
-            <Text className="font-exoSemibold text-lg capitalize">
-              Popular Institutions
-            </Text>
-            <Pressable className="">
-              <FunnelIcon size={28} color={themeColors.darkGrayText} />
-            </Pressable>
-          </View>
+          <SectionHeader
+            title={'Popular Institutions'}
+            onFilterPress={() => console.warn('press')}
+          />
 
           {/** ========================= Render List of institutions =========================== */}
           <View className="w-full pt-4 bg-transparent">

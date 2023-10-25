@@ -33,7 +33,7 @@ export const teacherData = [
     image: teacher1,
   },
   {
-    name: 'Paul Simmons',
+    name: 'Paul Simons',
     subject: 'Chemistry',
     image: teacher2,
   },
@@ -76,6 +76,14 @@ export const institutionData = [
     rating: '3.0',
     reviews: '745',
     image: school3,
+  },
+  {
+    name: `Simon's Rock College`,
+    field: 'Computer Science',
+    description: 'Early college for gifted high schoolers',
+    rating: '4.1',
+    reviews: '354',
+    image: school2,
   },
 ];
 

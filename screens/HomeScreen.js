@@ -16,7 +16,6 @@ import {
   MagnifyingGlassIcon,
   AdjustmentsVerticalIcon,
 } from 'react-native-heroicons/outline';
-import { FunnelIcon } from 'react-native-heroicons/solid';
 import { themeColors } from '../theme';
 import TeacherItem from '../components/home/teacherItem';
 import {
@@ -35,27 +34,55 @@ const { avatar } = images;
 export default function HomeScreen() {
   const [searchQuery, setSearchQuery] = useState('');
   const [teachers, setTeachers] = useState(teacherData);
+  const [institutions, setInstitutions] = useState(institutionData);
   const [SelectedSubject, setSelectedSubject] = useState();
   const [teachersFilterVisible, setTeachersFilterVisible] = useState(false);
   const [institutionsFilterVisible, setInstitutionsFilterVisible] =
     useState(false);
 
-  // Function to toggle the teachers filter visibility
+  /**
+   * @description Function to toggle the teachers filter visibility
+   */
   const toggleTeachersFilter = () => {
     setTeachersFilterVisible(!teachersFilterVisible);
   };
 
-  // Function to toggle the institutions filter visibility
+  /**
+   * @description Function to toggle the institutions filter visibility
+   */
   const toggleInstitutionsFilter = () => {
     setInstitutionsFilterVisible(!institutionsFilterVisible);
   };
 
-  const handleSearchChange = (text) => {
-    console.log(text);
-    setSearchQuery(text);
+  /**
+   * @description handles search for teachers and institutions
+   * @param {*} searchQuery
+   */
+  const handleSearchChange = (searchQuery) => {
+    setSearchQuery(searchQuery);
+    setTeachersFilterVisible(false);
+    setInstitutionsFilterVisible(false);
+
+    // set query to lowercase
+    const lowerCaseQuery = searchQuery.toLowerCase();
+
+    // Filter teachers based on the search query
+    const filteredTeachers = teacherData.filter((teacher) =>
+      teacher.name.toLowerCase().includes(lowerCaseQuery)
+    );
+    setTeachers(filteredTeachers);
+
+    // Filter institutions based on the search query
+    const filteredInstitutions = institutionData.filter((institution) =>
+      institution.name.toLowerCase().includes(lowerCaseQuery)
+    );
+    setInstitutions(filteredInstitutions);
   };
 
-  // Function to filter teachers based on the selected subject
+  /**
+   * @description Function to filter teachers based on the selected subject
+   * @param {*} subject
+   */
   const filterTeachersBySubject = (subject) => {
     setSelectedSubject(subject);
 
@@ -73,42 +100,36 @@ export default function HomeScreen() {
   return (
     <SafeAreaView className="bg-bgWhite px-7 pt-5 pb-[-35px] flex-1">
       {/**============= Header Area =================== */}
+      <View className="flex flex-row items-center justify-between">
+        <View className="">
+          {/** Get greeting based on current time */}
+          <HeaderText text={getLocalGreeting()} />
+          <Text className="font-exo font-semibold text-lg">Hardline Scott</Text>
+        </View>
+        {/** ============= Profile image/avatar ============ */}
+        <View className="bg-bgWhite shadow-xl rounded-xl">
+          <Image source={avatar} style={{ height: 62, width: 62 }} />
+        </View>
+      </View>
+      {/** ================ Search Input  ========================= */}
+      <View className="flex flex-row items-center justify-between my-7">
+        <View className="flex-1">
+          <SearchInput
+            placeholder={'Search'}
+            value={searchQuery}
+            onChange={handleSearchChange}
+            Icon={MagnifyingGlassIcon}
+          />
+        </View>
+        {/** ==================== Filter Icon ================================= */}
+        <Pressable className="ml-3">
+          <AdjustmentsVerticalIcon size={28} color={themeColors.darkGrayText} />
+        </Pressable>
+      </View>
       <ScrollView
         showsVerticalScrollIndicator={false}
         className=" h-full w-full"
       >
-        <View className="flex flex-row items-center justify-between">
-          <View className="">
-            {/** Get greeting based on current time */}
-            <HeaderText text={getLocalGreeting()} />
-            <Text className="font-exo font-semibold text-lg">
-              Hardline Scott
-            </Text>
-          </View>
-          {/** ============= Profile image/avatar ============ */}
-          <View className="bg-bgWhite shadow-xl rounded-xl">
-            <Image source={avatar} style={{ height: 62, width: 62 }} />
-          </View>
-        </View>
-        {/** ================ Search Input  ========================= */}
-        <View className="flex flex-row items-center justify-between my-7">
-          <View className="flex-1">
-            <SearchInput
-              placeholder={'Search'}
-              value={searchQuery}
-              onChange={handleSearchChange}
-              Icon={MagnifyingGlassIcon}
-            />
-          </View>
-          {/** ==================== Filter Icon ================================= */}
-          <Pressable className="ml-3">
-            <AdjustmentsVerticalIcon
-              size={28}
-              color={themeColors.darkGrayText}
-            />
-          </Pressable>
-        </View>
-
         {/** ========================= Teachers Section =========================== */}
         <View className="mt-2">
           <SectionHeader
@@ -169,7 +190,7 @@ export default function HomeScreen() {
               institutionsFilterVisible ? 'pt-0' : 'pt-4'
             }`}
           >
-            {institutionData.map((institution, index) => (
+            {institutions.map((institution, index) => (
               <InstitutionItem institution={institution} key={index} />
             ))}
           </View>

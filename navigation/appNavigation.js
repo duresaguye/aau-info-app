@@ -69,7 +69,12 @@ export default function AppNavigation() {
 }
 
 const { streamIcon, classWorkIcon, exploreIcon } = images;
-
+const extraTabOptions = {
+  tabBarLabelStyle: { fontFamily: 'exo' },
+  tabBarStyle: { borderTopRightRadius: 12, borderTopLeftRadius: 12 },
+  tabBarActiveTintColor: themeColors.bgPurple,
+  tabBarInactiveTintColor: themeColors.darkGrayText,
+};
 function BottomTabNavigator() {
   return (
     <Tab.Navigator initialRouteName="Explore">
@@ -92,9 +97,7 @@ function BottomTabNavigator() {
               />
             );
           },
-          tabBarLabelStyle: { fontFamily: 'exo' },
-          tabBarActiveTintColor: themeColors.bgPurple,
-          tabBarInactiveTintColor: themeColors.darkGrayText,
+          ...extraTabOptions,
         }}
       />
       <Tab.Screen
@@ -116,9 +119,7 @@ function BottomTabNavigator() {
               />
             );
           },
-          tabBarLabelStyle: { fontFamily: 'exo' },
-          tabBarActiveTintColor: themeColors.bgPurple,
-          tabBarInactiveTintColor: themeColors.darkGrayText,
+          ...extraTabOptions,
         }}
       />
       <Tab.Screen
@@ -140,9 +141,7 @@ function BottomTabNavigator() {
               />
             );
           },
-          tabBarLabelStyle: { fontFamily: 'exo' },
-          tabBarActiveTintColor: themeColors.bgPurple,
-          tabBarInactiveTintColor: themeColors.darkGrayText,
+          ...extraTabOptions,
         }}
       />
     </Tab.Navigator>

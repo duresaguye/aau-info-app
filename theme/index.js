@@ -5,4 +5,5 @@ export const themeColors = {
   bgWhite: '#F4F5F9',
   lightGrayText: '#636D77',
   darkGrayText: '#364356',
+  gold: '#FED430',
 };

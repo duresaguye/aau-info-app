@@ -1,5 +1,3 @@
-Certainly, here's a sample README.md for your GitHub repository:
-
 # Education App for the Senior React Native Developer Assignment
 
 ![Home Screen](https://i.imgur.com/gZgeRnZ.png)

@@ -1,6 +1,8 @@
 Certainly, here's a sample README.md for your GitHub repository:
 
 # Education App for the Senior React Native Developer Assignment
+[Home Screen](https://i.imgur.com/gZgeRnZ.png)
+
 
 Welcome to my Senior React Native Developer Assignment repository. This repository contains the code and assets for the mobile application based on the provided Figma design.
 
@@ -46,12 +48,11 @@ These instructions will help you get the project up and running on your local ma
 
 ## Screenshots
 
-![SIgn_In_Screens](https://github.com/mxnuchim/React-Native-Education-App/assets/55309494/4b41b83b-9bb0-4295-a211-55d9df9adc5e)
-![SIgn_Up_Screens](https://github.com/mxnuchim/React-Native-Education-App/assets/55309494/bb43d835-a24e-41f3-b57b-4575060ceadd)
+[Sign In Screens](https://i.imgur.com/hxd2HbL.png)
 
+[Sign Up Screens](https://i.imgur.com/hxd2HbL.png)
 
-![Home_Screen](https://github.com/mxnuchim/React-Native-Education-App/assets/55309494/e49943cc-deeb-491e-b92e-2096611d2575)
-
+[Home Screen](https://i.imgur.com/gZgeRnZ.png)
 
 
 ## License

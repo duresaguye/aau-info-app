@@ -4,8 +4,8 @@ import paint from './images/paint.png';
 import ruler from './images/ruler.png';
 import signin from './images/signin.png';
 import signup from './images/signup.png';
-import welcome from './images/welcome.png';
-import school1 from './images/school1.png';
+import welcome from './images/AUUlogo.jpg';
+import aaitlogo from './images/aaitlogo.jpg';
 import school2 from './images/school2.png';
 import school3 from './images/school3.png';
 import teacher1 from './images/teacher1.png';
@@ -26,7 +26,7 @@ export const images = {
   signin,
   signup,
   welcome,
-  school1,
+  aaitlogo,
   school2,
   school3,
   teacher1,

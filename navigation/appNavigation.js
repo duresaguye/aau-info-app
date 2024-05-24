@@ -6,6 +6,7 @@ import HomeScreen from '../screens/HomeScreen';
 import WelcomeScreen from '../screens/WelcomeScreen';
 import LoginScreen from '../screens/SignInScreen';
 import SignUpScreen from '../screens/SignUpScreen';
+import CampusDetails from '../screens/campusDetails';
 import SelectGradeScreen from '../screens/SelectGradeScreen';
 import SelectProvinceScreen from '../screens/SelectProvinceScreen';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -54,10 +55,11 @@ export default function AppNavigation() {
           options={{ headerShown: false }}
           component={SelectGradeScreen}
         />
+       
         <Stack.Screen
-          name="SelectProvince"
+          name="CampusDetails"
           options={{ headerShown: false }}
-          component={SelectProvinceScreen}
+        component={CampusDetails}
         />
       </Stack.Navigator>
     </NavigationContainer>
@@ -101,7 +103,7 @@ function BottomTabNavigator() {
         }}
       />
       <Tab.Screen
-        name="Stream"
+        name="Dept Course Resource"
         component={StreamScreen}
         options={{
           headerShown: false,
@@ -123,7 +125,7 @@ function BottomTabNavigator() {
         }}
       />
       <Tab.Screen
-        name="Classwork"
+        name="About"
         component={ClassWorkScreen}
         options={{
           headerShown: false,

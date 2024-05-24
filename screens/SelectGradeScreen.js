@@ -12,7 +12,7 @@ const SelectGradeScreen = () => {
   return (
     <SafeAreaView className="px-7 py-8">
       {/** ============== Header text component =========== */}
-      <HeaderText text={"What's your grade?"} />
+      <HeaderText text={"choose your compas"} />
 
       {/** ============== Select Grades ===================== */}
       <View className="mt-10">

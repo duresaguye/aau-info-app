@@ -12,6 +12,7 @@ import HeaderText from '../components/headerText';
 import { getLocalGreeting } from '../utils/helpers';
 import { images } from '../assets';
 import SearchInput from '../components/home/searchInput';
+import Button from '../components/button';
 import {
   MagnifyingGlassIcon,
   AdjustmentsVerticalIcon,
@@ -26,7 +27,7 @@ import {
 } from '../assets/data/data';
 import InstitutionItem from '../components/home/institutionItem';
 import SectionHeader from '../components/home/sectionHeader';
-import AreaFilter from '../components/home/areaFilter';
+
 import SubjectFilter from '../components/home/subjectFilter';
 
 const { avatar } = images;
@@ -106,7 +107,7 @@ export default function HomeScreen() {
         <View className="">
           {/** Get greeting based on current time */}
           <HeaderText text={getLocalGreeting()} />
-          <Text className="font-exo font-semibold text-lg">Hardline Scott</Text>
+          <Text className="font-exo font-semibold text-lg">Well come to AAU hub</Text>
         </View>
         {/** ============= Profile image/avatar ============ */}
         <View className="bg-bgWhite shadow-xl rounded-xl">
@@ -135,7 +136,7 @@ export default function HomeScreen() {
         {/** ========================= Teachers Section =========================== */}
         <View className="mt-2">
           <SectionHeader
-            title={'Popular Teachers'}
+            title={'Popular professors'}
             onFilterPress={toggleTeachersFilter}
             tintColor={
               teachersFilterVisible
@@ -147,7 +148,6 @@ export default function HomeScreen() {
           {/**============== Teacher Filters ==================== */}
           {teachersFilterVisible ? (
             <View className="flex flex-col my-5 space-y-2">
-              <AreaFilter filters={areaFilters} />
               <SubjectFilter
                 filters={subjectFilters}
                 onSubjectSelect={filterTeachersBySubject}
@@ -170,31 +170,17 @@ export default function HomeScreen() {
         {/** ========================= Institutions Section =========================== */}
         <View className="mt-2">
           <SectionHeader
-            title={'Popular Institutions'}
-            onFilterPress={toggleInstitutionsFilter}
-            tintColor={
-              institutionsFilterVisible
-                ? themeColors.bgPurple
-                : themeColors.lightGrayText
-            }
+            title={'AAU Colleges'}
+            
           />
-
-          {/**============== Institution Filters ==================== */}
-          {institutionsFilterVisible ? (
-            <View className="flex flex-col mt-5 space-y-2">
-              <AreaFilter filters={areaFilters} />
-            </View>
-          ) : null}
-
-          {/** ========================= Render List of institutions =========================== */}
           <View
-            className={`w-full bg-transparent ${
-              institutionsFilterVisible ? 'pt-0' : 'pt-4'
-            }`}
+            className={`w-full pt-5`}
           >
             {institutions.map((institution, index) => (
               <InstitutionItem institution={institution} key={index} />
+              
             ))}
+          
           </View>
         </View>
       </ScrollView>

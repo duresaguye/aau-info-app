@@ -5,7 +5,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 const ClassWorkScreen = () => {
   return (
     <SafeAreaView className="flex-1 bg-bgWhite p-8">
-      <Text>ClassWork Screen</Text>
+      <Text>Department study Resources  </Text>
     </SafeAreaView>
   );
 };

@@ -14,7 +14,7 @@ const ProvinceSelector = () => {
     <View className="flex justify-center bg-bgLightGray min-h-14 py-4 rounded-lg mb-[18px]">
       <View className="flex px-4">
         <Text className="font-exoSemibold text-darkGrayText my-1 text-base">
-          Provinces of Sri Lanka
+          AUU Hub
         </Text>
         {/** ======================== List of available provinces ============================== */}
         <FlatList

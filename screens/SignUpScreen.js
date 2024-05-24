@@ -25,7 +25,7 @@ export default function SignUpScreen() {
   const handleSubmit = () => {
     // Navigate to the next screen with user data
     console.log('user data --> ', userData);
-    navigation.navigate('SelectGrade', { userData });
+    navigation.navigate('Home', { userData });
   };
 
   return (

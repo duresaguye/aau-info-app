@@ -1,66 +1,9 @@
-import { images } from '..';
-
-const { teacher1, teacher2, teacher3, teacher4, aaitlogo, school2, school3 } =
-  images;
-export const welcomeScreenData = {
-  title: `Welcome to AUU Hub`,
-  subtitle: `This app contains the locations of AAU campus and their departments, as well as their departmental course materials.`,
-};
-
-export const gradesData = [
-  '6 kilo',
-  'AAIT',
-  'FBE',
-  '4 kilo',
-  'Commarce',
-  'Bushoftu',
-  'Safer Selam',
-  'Yarde',
-
-];
-
-export const provincesData = [
-  'Central',
-  'Eastern',
-  'North Central',
-  'northern',
-  'north western',
-  'sabaragamuwa',
-  'southern',
-  'uva',
-  'western',
-];
-
-export const teacherData = [
-  {
-    name: 'pr.Tasw',
-    subject: 'Biology',
-    image: teacher1,
-  },
-  {
-    name: 'Dr. wondwossen',
-    subject: 'Chemistry',
-    image: teacher2,
-  },
-  {
-    name: 'Dr.darge',
-    subject: 'information science',
-    image: teacher4,
-  },
-  {
-    name: 'Dr. Aray',
-    subject: 'Physics',
-    image: teacher3,
-  },
-];
-
-export const institutionData = 
-    [
+[
   {
     "id": 1,
-    "name": "Addis Ababa Institute of Technology AAIT",
-    "description": " Leading the way in Ethiopian engineering since 1965!  Undergraduate & graduate programs in Civil, Electrical, Mechanical, Chemical & more. Fosters innovation & research to power the nation's future.",
-    image: aaitlogo,
+    "name": "Addis Ababa Institute of Technology",
+    "description": "Leading the way in Ethiopian engineering since 1965!  Undergraduate & graduate programs in Civil, Electrical, Mechanical, Chemical & more. Fosters innovation & research to power the nation's future.",
+    "image": "https://res.cloudinary.com/dfonae1gu/image/upload/v1/media/college_images/AAiT_k3bk5j",
     "location": "5 Kilo",
     "map_link": "\u003Ciframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.2559769273166!2d38.7607419737527!3d9.040398788812999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b8f642ba9e021%3A0x2321687a606863f3!2sAddis%20Ababa%20Institute%20of%20Technology!5e0!3m2!1sen!2set!4v1711268759693!5m2!1sen!2set\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"\u003E\u003C/iframe\u003E",
     "stream": "Natural",
@@ -189,7 +132,7 @@ export const institutionData =
     "id": 2,
     "name": "Ethiopian Institute of Architecture, Buildings and Construction",
     "description": "Design your future! Shape Ethiopia's built environment & urban spaces. Offers programs in Architecture, Construction & Urban Planning. Fosters innovation & sustainability.",
-    image: aaitlogo,
+    "image": "https://res.cloudinary.com/dfonae1gu/image/upload/media/college_images/lideta_sze0nt.jpg",
     "location": "Lideta",
     "map_link": "\u003Ciframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.5559795338904!2d38.7306003!3d9.0129396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b8670e075fc17%3A0xf364f12cf2df2d35!2sEthiopian%20Institute%20of%20Architecture%20%2C%20Building%20Construction%20and%20City%20Development!5e0!3m2!1sen!2set!4v1711270406998!5m2!1sen!2set\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"\u003E\u003C/iframe\u003E",
     "stream": "Natural",
@@ -203,7 +146,7 @@ export const institutionData =
     "id": 3,
     "name": "College of Natural Science",
     "description": "Explore nature & unravel its secrets! Offers programs in Physics, Chemistry, Biology, Math, Computer Science & more. Dive deep with world-class research & innovation.",
-     image: aaitlogo,
+    "image": "https://res.cloudinary.com/dfonae1gu/image/upload/v1/media/college_images/AAiT_k3bk5j",
     "location": "4 Kilo",
     "map_link": "\u003Ciframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.3313651961985!2d38.76368169999999!3d9.033506299999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b8589e4c4a803%3A0xbae724e3b927f424!2sAddis%20Ababa%20University%20%7C%20Natural%20Sciences%20Campus!5e0!3m2!1sen!2set!4v1711270726114!5m2!1sen!2set\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"\u003E\u003C/iframe\u003E",
     "stream": "Natural",
@@ -370,7 +313,7 @@ export const institutionData =
     "id": 4,
     "name": "College of Health Science",
     "description": "Be a health hero! Doctors, nurses, pharmacists, & more. Train to heal, improve health, & advance Ethiopia's well-being.",
-    image: aaitlogo,
+    "image": "https://res.cloudinary.com/dfonae1gu/image/upload/media/college_images/sefere-selam_vd1ojz.jpg",
     "location": "6-Kilo",
     "map_link": "\u003Ciframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.485997042251!2d38.7500691!3d9.0193525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b85e9acff7407%3A0xdf23914d2ec9ac57!2sCollege%20of%20Health%20Sciences%2C%20AAU!5e0!3m2!1sen!2set!4v1711271128785!5m2!1sen!2set\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"\u003E\u003C/iframe\u003E",
     "stream": "Natural",
@@ -537,8 +480,8 @@ export const institutionData =
     "id": 5,
     "name": "College of Veterinary Medicine and Agriculture",
     "description": "Nurture animals, nourish lives! Train vets, agronomists, & food scientists. Ensure animal health, food security & sustainable agriculture.",
-    image: aaitlogo,
-    "location": "Bushoftu",
+    "image": "https://res.cloudinary.com/dfonae1gu/image/upload/media/college_images/bishoftu-campus_zeoxyy.jpg",
+    "location": "Bishoftu",
     "map_link": "\u003Ciframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3943.2712519561333!2d38.999992!3d8.7605297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b0cdaf70240ef%3A0xba5b4e96d683f6da!2sCollege%20of%20Veterinary%20Medicine%20and%20Agriculture%20Library!5e0!3m2!1sen!2set!4v1711271279957!5m2!1sen!2set\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"\u003E\u003C/iframe\u003E",
     "stream": "Natural",
     "gpa": "3.40",
@@ -666,7 +609,7 @@ export const institutionData =
     "id": 6,
     "name": "College of Business and Economics",
     "description": "Ethiopia's top biz school since 1943!  Offers undergrad, grad & PhD programs in Accounting, Finance, Economics, Management, Public Admin & more.  Strong research & industry ties.",
-    image: aaitlogo,
+    "image": "https://res.cloudinary.com/dfonae1gu/image/upload/v1/media/college_images/FBE_usok9i",
     "location": "FBE",
     "map_link": "\u003Ciframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.1819143875296!2d38.762658699999996!3d9.047164999999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b8f69515f1f37%3A0xea0356fa18a10b52!2sAddis%20Ababa%20University%20College%20of%20Business%20and%20Economics!5e0!3m2!1sen!2set!4v1711271455126!5m2!1sen!2set\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"\u003E\u003C/iframe\u003E",
     "stream": "Social",
@@ -814,7 +757,7 @@ export const institutionData =
     "id": 7,
     "name": "College of Law and Governance Studies",
     "description": "Shape justice! Law, human rights, & federal studies. Train lawyers, policymakers, & leaders for a just & equitable society.",
-    image: aaitlogo,
+    "image": "https://res.cloudinary.com/dfonae1gu/image/upload/v1/media/law_gr3w43",
     "location": "6 Kilo",
     "map_link": "\u003Ciframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.2004980942042!2d38.758440900000004!3d9.045467699999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b8f5b64661d07%3A0xdd07ff946c329c10!2sLaw%20school!5e0!3m2!1sen!2set!4v1711271607791!5m2!1sen!2set\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"\u003E\u003C/iframe\u003E",
     "stream": "Social",
@@ -848,7 +791,7 @@ export const institutionData =
     "id": 8,
     "name": "College of Social Science",
     "description": "Understand humans & society! Explore History, Philosophy, Geography, Sociology, Politics & more. Shape a just & equitable future.",
-    image: aaitlogo,
+    "image": "https://res.cloudinary.com/dfonae1gu/image/upload/media/college_images/CSS_jnl89u.jpg",
     "location": "6 Kilo",
     "map_link": "\u003Ciframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.1856285585873!2d38.75906919999999!3d9.046825799999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b8f69f1dbdf67%3A0xb8a418693b6edef9!2z4Yqg4Yuy4Yi1IOGKoOGJoOGJoyDhi6nhipLhiajhiK3hiLLhibI!5e0!3m2!1sen!2set!4v1711275571007!5m2!1sen!2set\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"\u003E\u003C/iframe\u003E",
     "stream": "Social",
@@ -1015,7 +958,7 @@ export const institutionData =
     "id": 9,
     "name": "College of Education and Behavioral Studies",
     "description": "Train teachers, psychologists, education leaders & specialists. Develop high-caliber professionals for Ethiopia's future.",
-     image: aaitlogo,
+    "image": "https://res.cloudinary.com/dfonae1gu/image/upload/v1/media/college_images/6-kilo_onidlk",
     "location": "6 Kilo",
     "map_link": "\u003Ciframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63043.2299353495!2d38.72566997910155!3d9.045342300000007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b8fdb2389dd71%3A0x6db6508891768de1!2sAAU%20education%20and%20behavioral%20studies%20office!5e0!3m2!1sen!2set!4v1711276014722!5m2!1sen!2set\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"\u003E\u003C/iframe\u003E",
     "stream": "Social",
@@ -1106,7 +1049,7 @@ export const institutionData =
     "id": 10,
     "name": "College of Humanities, Language Studies, Journalism and Communications",
     "description": "Explore languages, history, & cultures! Amharic, English, History, Philosophy & more. Fosters critical thinking & global understanding.",
-     image: aaitlogo,
+    "image": "https://res.cloudinary.com/dfonae1gu/image/upload/v1/media/college_images/bishoftu-campus_zeoxyy",
     "location": "6 Kilo",
     "map_link": "\u003Ciframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63042.970056937396!2d38.724050279101576!3d9.046825800000008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b8f69f1dbdf67%3A0xb8a418693b6edef9!2z4Yqg4Yuy4Yi1IOGKoOGJoOGJoyDhi6nhipLhiajhiK3hiLLhibI!5e0!3m2!1sen!2set!4v1711276449331!5m2!1sen!2set\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"\u003E\u003C/iframe\u003E",
     "stream": "Social",
@@ -1330,7 +1273,7 @@ export const institutionData =
     "id": 11,
     "name": "College of Performing and Visual Arts",
     "description": "Unleash your creativity! Music, Theatre, Fine Arts & Film. Hone your talent, express yourself & shape the future of Ethiopian arts",
-     image: aaitlogo,
+    "image": "https://res.cloudinary.com/dfonae1gu/image/upload/v1/media/college_images/yared_qdy5sb",
     "location": "Yared",
     "map_link": "\u003Ciframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63042.970056937396!2d38.724050279101576!3d9.046825800000008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b8f630948238f%3A0x18cbf4daf2a2e3e2!2sAll%C3%A9%20School%20of%20Fine%20Arts%20%26%20Design!5e0!3m2!1sen!2set!4v1711276614341!5m2!1sen!2set\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"\u003E\u003C/iframe\u003E",
     "stream": "Social",
@@ -1398,14 +1341,4 @@ export const institutionData =
     ],
     "freshmanOffice": "Any Social"
   }
-    ]
-
-export const areaFilters = ['SAfer Selam', 'Ledat', 'yeka subscite'];
-
-export const subjectFilters = [
-  'All Subjects',
-  'Biology',
-  'Chemistry',
-  'Physics',
-  'Science for Technology',
-];
+]

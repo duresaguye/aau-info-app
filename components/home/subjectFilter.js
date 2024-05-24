@@ -13,7 +13,7 @@ const SubjectFilter = ({ filters, onSubjectSelect }) => {
   return (
     <View className="">
       <Text className="font-exoSemibold text-darkGrayText text-xs capitalize ">
-        Subject
+        Department
       </Text>
       <View className="flex flex-row flex-wrap mt-3">
         {filters.map((item) => (

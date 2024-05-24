@@ -15,7 +15,7 @@ export default function WelcomeScreen() {
       <View className="flex-1 flex justify-around my-4">
         {/** ====================== Image =================================== */}
         <View className="flex-row justify-center">
-          <Image source={welcome} style={{ width: 324, height: 324 }} />
+          <Image source={welcome} style={{ width: 150, height: 150 }} />
         </View>
 
         {/** ====================== Welcome Text ============================= */}
@@ -33,7 +33,7 @@ export default function WelcomeScreen() {
           primaryBtnText={'Sign Up'}
           onPrimaryBtnPress={() => navigation.navigate('SignUp')}
           secondaryBtnText2={'Skip'}
-          onSecondaryBtnPress={() => navigation.navigate('SignIn')}
+          onSecondaryBtnPress={() => navigation.navigate('Home')}
         />
       </View>
     </SafeAreaView>

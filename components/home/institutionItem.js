@@ -4,6 +4,7 @@ import { useNavigation } from '@react-navigation/native';
 
 const InstitutionItem = ({ institution }) => {
   const navigation = useNavigation();
+   
 return (
     <View className="bg-white rounded-xl flex flex-row w-full min-h-[176px] items-center justify-between p-2 mb-4 shadow">
       {/**============== Institution Image ================ */}
@@ -20,7 +21,7 @@ return (
          location {' '}
         {institution.location}
           </Text>
-             <TouchableOpacity onPress={() => navigation.navigate('CampusDetails')}>
+              <TouchableOpacity onPress={() => navigation.navigate('CollegeDetails', { institution })}>
             <Text className="font-exo text-bgPurple text-lg">Read More about {institution.name}</Text>
           </TouchableOpacity>
         </View>

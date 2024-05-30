@@ -20,7 +20,7 @@ import {
 import { themeColors } from '../theme';
 import TeacherItem from '../components/home/teacherItem';
 import {
-  areaFilters,
+  
   institutionData,
   subjectFilters,
   teacherData,

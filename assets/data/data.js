@@ -1,6 +1,6 @@
 import { images } from '..';
 
-const { teacher1, teacher2, teacher3, teacher4, aaitlogo, school2, school3 } =
+const { teacher1, teacher2, teacher3, teacher4, aaitlogo} =
   images;
 export const welcomeScreenData = {
   title: `Welcome to AUU Hub`,

@@ -3,20 +3,14 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import HomeScreen from '../screens/HomeScreen';
+import StreamScreen from '../screens/StreamScreen';
+import ClassWorkScreen from '../screens/ClassWorkScreen';
 import WelcomeScreen from '../screens/WelcomeScreen';
 import LoginScreen from '../screens/SignInScreen';
 import SignUpScreen from '../screens/SignUpScreen';
-import CampusDetails from '../screens/campusDetails';
 import SelectGradeScreen from '../screens/SelectGradeScreen';
-import SelectProvinceScreen from '../screens/SelectProvinceScreen';
+import CollegeDetailsScreen from '../screens/CollegeDetailsScreen'; // Import the new screen
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import {
-  HomeIcon,
-  ShoppingBagIcon,
-  Squares2X2Icon,
-} from 'react-native-heroicons/solid';
-import StreamScreen from '../screens/StreamScreen';
-import ClassWorkScreen from '../screens/ClassWorkScreen';
 import { themeColors } from '../theme';
 import { images } from '../assets';
 
@@ -29,7 +23,7 @@ const Stack = createNativeStackNavigator();
 export default function AppNavigation() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Welcome">
+       <Stack.Navigator initialRouteName="Welcome">
         <Stack.Screen
           name="Home"
           options={{ headerShown: false }}
@@ -55,11 +49,10 @@ export default function AppNavigation() {
           options={{ headerShown: false }}
           component={SelectGradeScreen}
         />
-       
         <Stack.Screen
-          name="CampusDetails"
+          name="CollegeDetails"
           options={{ headerShown: false }}
-        component={CampusDetails}
+          component={CollegeDetailsScreen} // Register the new screen
         />
       </Stack.Navigator>
     </NavigationContainer>

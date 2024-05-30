@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "172213442067",
+    "project_id": "aauhb-14c14",
+    "storage_bucket": "aauhb-14c14.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:172213442067:android:09ade9bef9ba64015591e6",
+        "android_client_info": {
+          "package_name": "aauhub.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBOcekhMhR5L91vj3xjdmNvLNGCtrEGkjQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

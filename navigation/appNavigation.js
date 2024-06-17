@@ -8,11 +8,12 @@ import ClassWorkScreen from '../screens/ClassWorkScreen';
 import WelcomeScreen from '../screens/WelcomeScreen';
 import LoginScreen from '../screens/SignInScreen';
 import SignUpScreen from '../screens/SignUpScreen';
-import SelectGradeScreen from '../screens/SelectGradeScreen';
-import CollegeDetailsScreen from '../screens/CollegeDetailsScreen'; // Import the new screen
+import CollegeDetailsScreen from '../screens/CollegeDetailsScreen'; 
+import DepartmentDetailsScreen from '../screens/DepartmentDetailsScreen';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { themeColors } from '../theme';
 import { images } from '../assets';
+
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -44,17 +45,20 @@ export default function AppNavigation() {
           options={{ headerShown: false }}
           component={SignUpScreen}
         />
-        <Stack.Screen
-          name="SelectGrade"
-          options={{ headerShown: false }}
-          component={SelectGradeScreen}
-        />
-        <Stack.Screen
+        
+  <Stack.Screen
           name="CollegeDetails"
           options={{ headerShown: false }}
           component={CollegeDetailsScreen} // Register the new screen
         />
+        <Stack.Screen
+          name='DepartmentDetails'
+          options={{ headerShown: false }}
+          component={DepartmentDetailsScreen}
+        
+        />
       </Stack.Navigator>
+      
     </NavigationContainer>
   );
 }
@@ -96,7 +100,7 @@ function BottomTabNavigator() {
         }}
       />
       <Tab.Screen
-        name="Dept Course Resource"
+        name="Chat"
         component={StreamScreen}
         options={{
           headerShown: false,
@@ -136,9 +140,11 @@ function BottomTabNavigator() {
               />
             );
           },
+          
           ...extraTabOptions,
         }}
       />
+      
     </Tab.Navigator>
   );
 }

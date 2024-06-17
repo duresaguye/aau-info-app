@@ -12,24 +12,305 @@
     "Telegram": null,
     "departments": [
       {
-        "id": 1,
-        "name": "Biomedical Engineering",
-        "description": "Our program aims to train Biomedical Engineers adept in designing, developing, installing, operating, and maintaining medical equipment. Graduates will contribute to enhancing the healthcare system, conducting research tailored to the country's needs in the field of biomedical engineering.",
-        "gpaEntry": "86.05",
-        "gpaPercentage": 100,
-        "entrancePercentage": 0,
-        "Telegram": null,
-        "Years": 5,
-        "freshmanSemesters": 3,
-        "icon_url": null,
-        "regular": "Regular",
-        "extension": "Extension",
-        "degree": "BSc",
-        "freshman_office": "Pre-Engineering | AAiT",
-        "college_name": "AAiT",
-        "stream": "Natural",
-        "college": 1
+  "Program": {
+    "title": "B.Sc. in Biomedical Engineering",
+    "College": "AAiT",
+    "Department": "Center for Biomedical Engineering",
+    "Program duration": {
+      "regular": 5,
+      "extension": 6
+    },
+    "Study Language": "English",
+    "Credits": {
+      "ECTS": 313,
+      "Cr.hr": 165
+    },
+    "Mode of delivery": ["Regular", "Extension"]
+  },
+  "Program Objective": {
+    "General Objectives": [
+      "Train Biomedical Engineers who can design, develop, install, operate, and maintain biomedical equipments and improve healthcare system in the country.",
+      "Train Biomedical Engineers to carry out research in the areas of biomedical engineering which are particularly relevant to the needs of the Country."
+    ],
+    "Specific Objectives": [
+      "Engage students in technical activities to support the health care system and emerging industries;",
+      "prepare graduates with the capability to follow the current and future developments in the field and related applications;",
+      "Enable graduates to work as a team in addressing technical problems which may be encountered in real life and health care system;",
+      "Provide graduates with sufficient background to undertake postgraduate training in related specialized areas of biomedical engineering."
+    ]
+  },
+  "Admission requirements": {
+    "Regular": "Successful completion of the common first semester pre-engineering program, subject to possible screening on the basis of academic performance.",
+    "Evening": "The admission criterion for extension program is similar to other engineering extension programs at the AAiT and in addition to this common requirement, the applicant must have been employed by a healthcare institution (hospital, clinic, etc) as a biomedical technician for a minimum of two years.",
+    "Advanced Standing": "In both the regular and evening programs, limited seats are available for applicants with Diploma in Biomedical Technology and two years of relevant experience. The course list for exemption is prepared on a case by case basis depending of the courses taken in a prior study program."
+  },
+  "Graduation requirement": {
+    "Total ECTS": 313,
+    "Course work": "without “F” grade in any course;",
+    "CGPA and MGPA": "at least 2.0;",
+    "Industry Attachment": "Fulfill the Industry Attachment requirement;",
+    "BSc Thesis": "BSc Thesis as partial fulfillment for B.Sc. degree."
+  },
+  "List of Modules and Courses": {
+    "General Education Modules": [
+      {
+        "Module": "EnLa–M1013",
+        "Courses": [
+          {"Course Code": "EnLa1011", "Course Title": "Communicative English Skills", "ECTS": 5, "Cr.hr": 3},
+          {"Course Code": "EnLa1012", "Course Title": "Basic Writing Skills", "ECTS": 5, "Cr.hr": 3}
+        ]
       },
+      {
+        "Module": "CESt–M1023",
+        "Courses": [
+          {"Course Code": "CESt1023", "Course Title": "Civics and Ethical Education", "ECTS": 5, "Cr.hr": 3}
+        ]
+      },
+      {
+        "Module": "Phil–M1033",
+        "Courses": [
+          {"Course Code": "Phil1033", "Course Title": "Introduction to Logic", "ECTS": 5, "Cr.hr": 3}
+        ]
+      }
+    ],
+    "Basic Engineering Modules": [
+      {
+        "Module": "GEng–M1043",
+        "Courses": [
+          {"Course Code": "Math-1041", "Course Title": "Applied Mathematics I", "ECTS": 7, "Cr.hr": 4},
+          {"Course Code": "Math-1042", "Course Title": "Applied Mathematics II", "ECTS": 7, "Cr.hr": 4}
+        ]
+      },
+      {
+        "Module": "GEng–M1053",
+        "Courses": [
+          {"Course Code": "CEng-1051", "Course Title": "Engineering Mechanics I (Statics)", "ECTS": 6, "Cr.hr": 3},
+          {"Course Code": "MEng-1052", "Course Title": "Engineering Mechanics II (Dynamics)", "ECTS": 6, "Cr.hr": 3}
+        ]
+      },
+      {
+        "Module": "GEng-M1063",
+        "Courses": [
+          {"Course Code": "GEng-1061", "Course Title": "Introduction to Engineering Profession", "ECTS": 2, "Cr.hr": 1},
+          {"Course Code": "MEng-1062", "Course Title": "Engineering Drawing", "ECTS": 6, "Cr.hr": 3}
+        ]
+      }
+    ],
+    "Support Modules": [
+      {
+        "Module": "BMED-M2072",
+        "Courses": [
+          {"Course Code": "ECEG-1071", "Course Title": "Circuit Theory", "ECTS": 6, "Cr.hr": 4},
+          {"Course Code": "ECEG-2072", "Course Title": "Electronic Devices and Applications", "ECTS": 6, "Cr.hr": 4}
+        ]
+      },
+      {
+        "Module": "BMED-M2082",
+        "Courses": [
+          {"Course Code": "BMED-2080", "Course Title": "Workshop Practice", "ECTS": 5, "Cr.hr": 3}
+        ]
+      },
+      {
+        "Module": "BMED-M2092",
+        "Courses": [
+          {"Course Code": "BMED-2091", "Course Title": "Introduction to Computing", "ECTS": 5, "Cr.hr": 3},
+          {"Course Code": "Math-2092", "Course Title": "Applied Mathematics III", "ECTS": 7, "Cr.hr": 4},
+          {"Course Code": "BMED-2093", "Course Title": "Computational Methods", "ECTS": 4, "Cr.hr": 2},
+          {"Course Code": "BMED-2094", "Course Title": "Probability and Statistics", "ECTS": 4, "Cr.hr": 2}
+        ]
+      },
+      {
+        "Module": "BMED-M3102",
+        "Courses": [
+          {"Course Code": "ECEG-3101", "Course Title": "Logic Circuits and Computer Design", "ECTS": 6, "Cr.hr": 4},
+          {"Course Code": "ECEG-3102", "Course Title": "Microcomputers and Interfacing", "ECTS": 5, "Cr.hr": 3}
+        ]
+      },
+      {
+        "Module": "BMED-M3112",
+        "Courses": [
+          {"Course Code": "ECEG-3111", "Course Title": "Electronics I", "ECTS": 6, "Cr.hr": 4},
+          {"Course Code": "ECEG-3112", "Course Title": "Electronics II", "ECTS": 6, "Cr.hr": 4}
+        ]
+      },
+      {
+        "Module": "BMED-M3122",
+        "Courses": [
+          {"Course Code": "BMED-3120", "Course Title": "Thermodynamics", "ECTS": 5, "Cr.hr": 3}
+        ]
+      },
+      {
+        "Module": "BMED-M3132",
+        "Courses": [
+          {"Course Code": "ECEG-3130", "Course Title": "Instrumentation Engineering", "ECTS": 5, "Cr.hr": 3}
+        ]
+      },
+      {
+        "Module": "BMED-M3142",
+        "Courses": [
+          {"Course Code": "ECEG-3140", "Course Title": "Electromagnetics and Electrical Machines", "ECTS": 5, "Cr.hr": 3}
+        ]
+      },
+      {
+          "Module": "BMED-M3152",
+          "Courses": [
+              {"Course Code": "ECEG-3150", "Course Title": "Signals and Systems", "ECTS": 5, "Cr.hr": 3}
+          ]
+      },
+      {
+        "Module": "BMED-M4162",
+        "Courses": [
+          {"Course Code": "ECEG-4160", "Course Title": "Data Structures & OO Programming", "ECTS": 5, "Cr.hr": 3}
+        ]
+      },
+      {
+        "Module": "BMED-M4172",
+        "Courses": [
+          {"Course Code": "ECEG-4170", "Course Title": "Control Engineering", "ECTS": 5, "Cr.hr": 3}
+        ]
+      },
+      {
+        "Module": "BMED-M5182",
+        "Courses": [
+          {"Course Code": "MEng-5180", "Course Title": "Quality Management", "ECTS": 5, "Cr.hr": 3}
+        ]
+      },
+      {
+        "Module": "BMED-M5192",
+        "Courses": [
+          {"Course Code": "BMED-5190", "Course Title": "Research Methods and Presentation", "ECTS": 5, "Cr.hr": 3}
+        ]
+      },
+      {
+        "Module": "BMED-M5202",
+        "Courses": [
+          {"Course Code": "GEng-5201", "Course Title": "Engineering and Medical Ethics", "ECTS": 2, "Cr.hr": 1},
+          {"Course Code": "GEng-5202", "Course Title": "Entrepreneurship", "ECTS": 5, "Cr.hr": 3}
+        ]
+      }
+    ],
+    "Core Modules": [
+      {
+        "Module": "BMED-M2211",
+        "Courses": [
+          {"Course Code": "Anat-1211", "Course Title": "Human Anatomy", "ECTS": 4, "Cr.hr": 2},
+          {"Course Code": "Phy-2212", "Course Title": "Human Physiology", "ECTS": 4, "Cr.hr": 2},
+          {"Course Code": "Chem-2213", "Course Title": "Fundamentals of Bio-Chemistry", "ECTS": 5, "Cr.hr": 3},
+          {"Course Code": "Biol-2214", "Course Title": "Cell Biology and Genetics", "ECTS": 4, "Cr.hr": 2}
+        ]
+      },
+      {
+        "Module": "BMED-M2221",
+        "Courses": [
+          {"Course Code": "Phys-2221", "Course Title": "Bio-physics", "ECTS": 5, "Cr.hr": 3},
+          {"Course Code": "Phys-2222", "Course Title": "Bio-optics", "ECTS": 5, "Cr.hr": 3},
+          {"Course Code": "Phys-2223", "Course Title": "Medical Radiation Physics", "ECTS": 5, "Cr.hr": 3},
+          {"Course Code": "BMED-2224", "Course Title": "Biomechanics", "ECTS": 5, "Cr.hr": 3}
+        ]
+      },
+      {
+        "Module": "BMED-M3231",
+        "Courses": [
+          {"Course Code": "BMED-3231", "Course Title": "Biomaterials", "ECTS": 5, "Cr.hr": 3},
+          {"Course Code": "BMED-3232", "Course Title": "Biofluid Mechanics and Bio-transport", "ECTS": 4, "Cr.hr": 2}
+        ]
+      },
+      {
+        "Module": "BMED-M3241",
+        "Courses": [
+          {"Course Code": "BMED-3240", "Course Title": "Therapeutic Devices and Systems", "ECTS": 5, "Cr.hr": 3}
+        ]
+      },
+      {
+        "Module": "BMED-M3251",
+        "Courses": [
+          {"Course Code": "BMED-3250", "Course Title": "Biomedical Engineering", "ECTS": 5, "Cr.hr": 3}
+        ]
+      },
+      {
+        "Module": "BMED-M4261",
+        "Courses": [
+          {"Course Code": "BMED-4261", "Course Title": "Biomedical Instrumentation & Processing", "ECTS": 6, "Cr.hr": 4},
+          {"Course Code": "BMED-4262", "Course Title": "Biomedical Imaging Systems", "ECTS": 5, "Cr.hr": 3}
+        ]
+      },
+      {
+        "Module": "BMED-M4271",
+        "Courses": [
+          {"Course Code": "BMED-4271", "Course Title": "Digital Signal Processing", "ECTS": 5, "Cr.hr": 3},
+          {"Course Code": "BMED-5272", "Course Title": "Digital Image Processing", "ECTS": 5, "Cr.hr": 3}
+        ]
+      },
+      {
+        "Module": "BMED-M4281",
+        "Courses": [
+          {"Course Code": "BMED-4280", "Course Title": "Practical Attachment", "ECTS": 30}
+        ]
+      },
+      {
+        "Module": "BMED-M4291",
+        "Courses": [
+          {"Course Code": "BMED-4291", "Course Title": "Biomedical Design I", "ECTS": 4, "Cr.hr": 2},
+          {"Course Code": "BMED-5292", "Course Title": "Biomedical Design II", "ECTS": 4, "Cr.hr": 2}
+        ]
+      },
+      {
+        "Module": "BMED-M5301",
+        "Courses": [
+          {"Course Code": "BMED-5300", "Course Title": "Healthcare Technology Management", "ECTS": 5, "Cr.hr": 3}
+        ]
+      },
+      {
+        "Module": "BMED-M5311",
+        "Courses": [
+          {"Course Code": "BMED-5310", "Course Title": "Medical Safety and Regulation", "ECTS": 5, "Cr.hr": 3}
+        ]
+      },
+      {
+        "Module": "BMED-M5321",
+        "Courses": [
+          {"Course Code": "BMED-5320", "Course Title": "B.Sc. Thesis", "ECTS": 12, "Cr.hr": 6}
+        ]
+      }
+    ],
+    "Elective Modules": [
+      {
+        "Module Set I": [
+          {"Course Code": "BMED-5331", "Course Title": "Hospital Engineering", "ECTS": 5, "Cr.hr": 3},
+          {"Course Code": "BMED-5332", "Course Title": "Health Informatics and Telemedicine", "ECTS": 5, "Cr.hr": 3},
+          {"Course Code": "BMED-5333", "Course Title": "Database Systems & Software Engineering", "ECTS": 5, "Cr.hr": 3}
+        ]
+      },
+      {
+        "Module Set II": [
+          {"Course Code": "BMED-5341", "Course Title": "Rehabilitation Eng’g Assistive Technology", "ECTS": 5, "Cr.hr": 3},
+          {"Course Code": "BMED-5342", "Course Title": "Biomedical Modeling & Simulation", "ECTS": 5, "Cr.hr": 3}
+        ]
+      }
+    ]
+  },
+  "Program Details": {
+    "id": 1,
+    "image": "aaitlogo",
+    "name": "Biomedical Engineering",
+    "description": "Our program aims to train Biomedical Engineers adept in designing, developing, installing, operating, and maintaining medical equipment. Graduates will contribute to enhancing the healthcare system, conducting research tailored to the country's needs in the field of biomedical engineering.",
+    "gpaEntry": "86.05",
+    "gpaPercentage": 100,
+    "entrancePercentage": 0,
+    "Telegram": null,
+    "Years": 5,
+    "freshmanSemesters": 3,
+    "icon_url": null,
+    "regular": "Regular",
+    "extension": "Extension",
+    "degree": "BSc",
+    "freshman_office": "Pre-Engineering | AAiT",
+    "college_name": "AAiT",
+    "stream": "Natural",
+    "college": 1
+  }
+}
+,
       {
         "id": 2,
         "name": "Chemical Engineering",

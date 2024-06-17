@@ -107,7 +107,7 @@ export default function HomeScreen() {
         <View className="">
           {/** Get greeting based on current time */}
           <HeaderText text={getLocalGreeting()} />
-          <Text className="font-exo font-semibold text-lg">Well come to AAU hub</Text>
+          <Text className="font-exo font-semibold text-lg">Well come  to AAU hub</Text>
         </View>
         {/** ============= Profile image/avatar ============ */}
         <View className="bg-bgWhite shadow-xl rounded-xl">

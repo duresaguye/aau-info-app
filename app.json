@@ -22,7 +22,7 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.dura_g.appui"
+      "package": "relatedtoanysample.aauhub"
     },
     "web": {
       "favicon": "./assets/favicon.png"

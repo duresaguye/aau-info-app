@@ -5,7 +5,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 const StreamScreen = () => {
   return (
     <SafeAreaView className="flex-1 bg-bgWhite p-8 ">
-      <Text>Department Course Resource</Text>
+      <Text>Chat</Text>
     </SafeAreaView>
   );
 };

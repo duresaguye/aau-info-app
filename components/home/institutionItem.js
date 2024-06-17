@@ -1,4 +1,4 @@
-import { View, Text, Image, TouchableOpacity } from 'react-native';
+import { View, Text, Image, TouchableOpacity,StyleSheet } from 'react-native';
 import React from 'react';
 import { useNavigation } from '@react-navigation/native';
 
@@ -20,15 +20,31 @@ return (
           <Text className="font-exoSemibold text-darkGrayText text-2xl capitalize">
          location {' '}
         {institution.location}
-          </Text>
-              <TouchableOpacity onPress={() => navigation.navigate('CollegeDetails', { institution })}>
-            <Text className="font-exo text-bgPurple text-lg">Read More about {institution.name}</Text>
+        </Text>
+        <TouchableOpacity
+            onPress={() => navigation.navigate('CollegeDetails', { institution })}
+                 className="py-3 bg-bgPurple px-7 rounded-xl w-[267px] max-h-[61px] flex items-center justify-center" >
+          <Text className="text-white font-bold">View Details</Text>
+          
           </TouchableOpacity>
+             
         </View>
       </View>
       
     </View>
   );
 };
-
+const styles = StyleSheet.create({
+   departmentButton: {
+    marginTop: 10,
+    backgroundColor: '#1E90FF',
+    padding: 10,
+    borderRadius: 5,
+  },
+  departmentButtonText: {
+    color: '#ffffff',
+    fontSize: 16,
+    textAlign: 'center',
+  },
+})
 export default InstitutionItem;

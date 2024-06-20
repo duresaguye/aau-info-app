@@ -44,9 +44,10 @@ const CollegeDetailsScreen = ({ route }) => {
         {institution.departments && (
           <View style={styles.departmentsContainer}>
             <Text style={styles.departmentsTitle}>Departments:</Text>
+            
             {institution.departments.map((department, index) => (
               <View key={index} style={styles.department}>
-                <Image source={getImageSource(department.image)} style={styles.institutionImage} />
+               <Image source={getImageSource(department.image)} style={styles.institutionImage} />
                 <Text style={styles.departmentName}>{department.name}</Text>
                 <Text style={styles.departmentDescription}>{department.description}</Text>
                 <Text style={styles.departmentInfo}>freshman Office: {department.freshmanOffice}</Text>
@@ -55,9 +56,10 @@ const CollegeDetailsScreen = ({ route }) => {
                 <Text style={styles.departmentInfo}>Years: {department.Years}</Text>
                   <TouchableOpacity
                   onPress={() => navigation.navigate('DepartmentDetails', { department })}
-                  style={styles.viewDetailsButton}
+                   className="py-3 bg-bgPurple px-7 rounded-xl w-[267px] max-h-[61px] flex items-center justify-center"
+                 
                 >
-                  <Text style={styles.viewDetailsButtonText}>View Details</Text>
+                  <Text className="text-white font-bold">View Details</Text>
                 </TouchableOpacity>
               </View>
             ))}
@@ -104,9 +106,9 @@ const styles = StyleSheet.create({
     padding: 15,
   },
   institutionImage: {
-    height: 250,
+    height: 300,
     width: '100%',
-    borderRadius: 10,
+    borderRadius: 0,
     marginBottom: 20,
     resizeMode: 'cover',
   },
@@ -167,16 +169,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: '#495057',
   },
-  viewDetailsButton: {
-    padding: 10,
-    backgroundColor: '#343a40',
-    borderRadius: 5,
-    marginTop: 10,
-  },
-  viewDetailsButtonText: {
-    color: 'white',
-    textAlign: 'center',
-  },
+ 
 });
 
 export default CollegeDetailsScreen;

@@ -1,10 +1,14 @@
 import React from 'react';
-import { View, Text, StyleSheet, ScrollView, TouchableOpacity, StatusBar, TouchableWithoutFeedback } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, TouchableOpacity, StatusBar, Image } from 'react-native';
 import { ArrowLeftIcon } from 'react-native-heroicons/solid';
 import { useNavigation } from '@react-navigation/native';
 
 const DepartmentDetailsScreen = ({ route }) => {
   const { department } = route.params;
+
+   const getImageSource = (image) => {
+    return typeof image === 'string' ? { uri: image } : image;
+  };
 
   if (!department) {
     return <Text>No department data available</Text>;
@@ -20,33 +24,30 @@ const DepartmentDetailsScreen = ({ route }) => {
         <Text style={styles.backButtonText}>Back</Text>
       </TouchableOpacity>
       <ScrollView contentContainerStyle={styles.scrollViewContent}>
+         <Image source={getImageSource(department.image)} style={styles.institutionImage} />
         <Text style={styles.departmentName}>{department.name}</Text>
         <Text style={styles.departmentDescription}>{department.description}</Text>
         <Text style={styles.departmentInfo}>General Objectives: {department.GeneralObjectives}</Text>
         <Text style={styles.departmentInfo}>GPA Entry: {department.gpaEntry}</Text>
         <Text style={styles.departmentInfo}>GPA Percentage: {department.gpaPercentage}</Text>
         <Text style={styles.departmentInfo}>Years: {department.Years}</Text>
-        {/*
-        {/* Render Admission Requirements   <Text style={styles.sectionTitle}>Admission Requirements</Text>
-        <Text style={styles.admissionInfo}>Regular: {department.Admissionrequirements.Regular}</Text>
-        <Text style={styles.admissionInfo}>Evening: {department.Admissionrequirements.Evening}</Text>
-        <Text style={styles.admissionInfo}>Advanced Standing: {department.Admissionrequirements['Advanced Standing']}</Text>
-         */}
-       
-       {/* Render List of Modules and Courses  <Text style={styles.sectionTitle}>List of Modules and Courses</Text>
-        {department['List of Modules and Courses']['General Education Modules'].map((module, index) => (
-          <View key={index}>
-            <Text style={styles.moduleTitle}>{module.Module}</Text>
-            {module.Courses.map((course, idx) => (
-              <Text key={idx} style={styles.courseInfo}>
-                Course Code: {course['Course Code']}, Course Title: {course['Course Title']}, ECTS: {course.ECTS}, Cr.hr: {course['Cr.hr']}
-              </Text>
-            ))}
-          </View>
-        ))}
-       */}
-         
-       
+        <Text style={styles.departmentInfo}>freshman_office: {department.freshman_office}</Text>
+        <Text style={styles.departmentInfo}>freshmanSemesters: {department.freshmanSemesters}</Text>
+        <Text style={styles.departmentInfo}>Degree: {department.degree}</Text>
+        {/* Render List of Modules and Courses */}
+         <Text style={styles. backButtonText}> modules and courses</Text>
+        {department.ModulesAndCourses && Array.isArray(department.ModulesAndCourses) ? (
+  department.ModulesAndCourses.map((module, index) => (
+    <View key={index} style={styles.moduleContainer}>
+      <Text style={styles.moduleTitle}>{module['Module Code ']} - {module['Module Name']}</Text>
+      <Text style={styles.courseInfo}>Course Code: {module['Course Code']}</Text>
+      <Text style={styles.courseInfo}>Course Name: {module['Course Name']}</Text>
+      <Text style={styles.courseInfo}>ECTS: {module['Module ECTS']}</Text>
+    </View>
+  ))
+) : (
+  <Text>No modules and courses data available</Text>
+)}
       </ScrollView>
     </View>
   );
@@ -72,6 +73,13 @@ const styles = StyleSheet.create({
     shadowRadius: 2,
     elevation: 2,
   },
+   institutionImage: {
+    height: 330,
+    width: '100%',
+    borderRadius: 10,
+    marginBottom: 20,
+    resizeMode: 'cover',
+  },
   backButtonText: {
     marginLeft: 5,
     fontSize: 16,
@@ -86,6 +94,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: '#343a40',
     marginBottom: 10,
+    
   },
   departmentDescription: {
     fontSize: 16,
@@ -105,10 +114,8 @@ const styles = StyleSheet.create({
     marginTop: 20,
     marginBottom: 10,
   },
-  admissionInfo: {
-    fontSize: 16,
-    color: '#495057',
-    marginBottom: 5,
+  moduleContainer: {
+    marginBottom: 15,
   },
   moduleTitle: {
     fontSize: 18,

@@ -1,4 +1,4 @@
-import { View, Text, Image, TouchableOpacity,StyleSheet } from 'react-native';
+import { View, Text, Image, TouchableOpacity} from 'react-native';
 import React from 'react';
 import { useNavigation } from '@react-navigation/native';
 
@@ -9,7 +9,7 @@ return (
     <View className="bg-white rounded-xl flex flex-row w-full min-h-[176px] items-center justify-between p-2 mb-4 shadow">
       {/**============== Institution Image ================ */}
       <View className="rounded-xl">
-        <Image source={institution.image} style={{ height: 250, width: 300 }} />
+        <Image source={institution.image} style={{ height: 300, width: 300 }} />
         <Text className="font-exoSemibold text-darkGrayText text-2xl capitalize">
           {institution.name}
         </Text>
@@ -34,17 +34,5 @@ return (
     </View>
   );
 };
-const styles = StyleSheet.create({
-   departmentButton: {
-    marginTop: 10,
-    backgroundColor: '#1E90FF',
-    padding: 10,
-    borderRadius: 5,
-  },
-  departmentButtonText: {
-    color: '#ffffff',
-    fontSize: 16,
-    textAlign: 'center',
-  },
-})
+
 export default InstitutionItem;

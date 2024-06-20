@@ -1,5 +1,5 @@
-import { View, Text, Image, TouchableOpacity, Pressable } from 'react-native';
 import React, { useState } from 'react';
+import { View, Text, Image,Pressable,  Alert,TouchableOpacity, StyleSheet, KeyboardAvoidingView, ScrollView } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation } from '@react-navigation/native';
 import { images } from '../assets';
@@ -9,7 +9,7 @@ import { EyeIcon } from 'react-native-heroicons/solid';
 
 const { signup } = images;
 
-export default function SignUpScreen() {
+const SignUpScreen = () => {
   const navigation = useNavigation();
 
   const [userData, setUserData] = useState({
@@ -22,50 +22,105 @@ export default function SignUpScreen() {
     setUserData({ ...userData, [key]: value });
   };
 
+  const validateInputs = () => {
+    const { name, email, password } = userData;
+    if (!name) {
+      Alert.alert('Validation Error', 'Name is required');
+      return false;
+    }
+    if (!email || !/\S+@\S+\.\S+/.test(email)) {
+      Alert.alert('Validation Error', 'Valid email is required');
+      return false;
+    }
+    if (!password || password.length < 6) {
+      Alert.alert('Validation Error', 'Password must be at least 6 characters');
+      return false;
+    }
+    return true;
+  };
   const handleSubmit = () => {
-    // Navigate to the next screen with user data
-    console.log('user data --> ', userData);
-    navigation.navigate('Home', { userData });
+    if (validateInputs()) {
+      // Navigate to the next screen with user data
+      console.log('user data --> ', userData);
+      navigation.navigate('Home', { email: userData.email });
+    }
   };
 
   return (
-    <SafeAreaView className="flex-1 bg-bgWhite px-8">
-      <View className="flex-1 flex justify-around">
-        {/** ====================== Image ============================= */}
-        <View className="flex-row justify-center mb-[-15%] mt-[-10%]">
-          <Image source={signup} style={{ width: 353, height: 235 }} />
-        </View>
-        {/** ====================== Sign Up inputs ============================= */}
-        <View className="flex flex-col w-full items-center justify-center mt-3">
-          <Input
-            label={'Name'}
-            placeholder={'Your name'}
-            value={userData.name}
-            onChange={(text) => handleInputChange('name', text)}
-          />
-          <Input
-            label={'Email address'}
-            placeholder={'name@example.com'}
-            onChange={(text) => handleInputChange('email', text)}
-          />
-          <Input
-            label={'Password'}
-            placeholder={'**********'}
-            Icon={EyeIcon}
-            onChange={(text) => handleInputChange('password', text)}
-            last
-          />
-        </View>
-
-        {/** ====== Action button -> Navigation to grade selection screen ======= */}
-        <Button
-          primaryBtnText={'Sign Up'}
-          onPrimaryBtnPress={handleSubmit}
-          secondaryBtnText1={'Already have an account?'}
-          secondaryBtnText2={'Sign In'}
-          onSecondaryBtnPress={() => navigation.navigate('SignIn')}
-        />
-      </View>
+    <SafeAreaView style={styles.container}>
+      <ScrollView contentContainerStyle={styles.scrollContainer}>
+        <KeyboardAvoidingView behavior="padding" style={styles.flex1}>
+          <View style={styles.imageContainer}>
+            <Image source={signup} style={styles.image} />
+          </View>
+          <View style={styles.content}>
+            <Text style={styles.title}>Sign Up</Text>
+            <Input
+              label={'Name'}
+              placeholder={'Your name'}
+              value={userData.name}
+              onChange={(text) => handleInputChange('name', text)}
+            />
+            <Input
+              label={'Email address'}
+              placeholder={'name@example.com'}
+              onChange={(text) => handleInputChange('email', text)}
+            />
+            <Input
+              label={'Password'}
+              placeholder={'**********'}
+              Icon={EyeIcon}
+              onChange={(text) => handleInputChange('password', text)}
+              last
+            />
+            <Button
+              primaryBtnText={'Sign Up'}
+              onPrimaryBtnPress={handleSubmit}
+              secondaryBtnText1={'Already have an account?'}
+              secondaryBtnText2={'Sign In'}
+              onSecondaryBtnPress={() => navigation.navigate('SignIn')}
+            />
+          </View>
+        </KeyboardAvoidingView>
+      </ScrollView>
     </SafeAreaView>
   );
-}
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+  },
+  scrollContainer: {
+    flexGrow: 1,
+    justifyContent: 'center',
+  },
+  flex1: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  imageContainer: {
+    marginBottom: 20,
+    alignItems: 'center',
+  },
+  image: {
+    width: 200,
+    height: 150,
+    resizeMode: 'contain',
+  },
+  content: {
+    width: '80%',
+    maxWidth: 400,
+    alignSelf: 'center',
+  },
+  title: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginBottom: 20,
+    textAlign: 'center',
+  },
+});
+
+export default SignUpScreen;

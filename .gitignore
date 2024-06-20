@@ -1,17 +1,19 @@
-node_modules/
-.expo/
-dist/
-npm-debug.*
-*.jks
-*.p8
-*.p12
-*.key
-*.mobileprovision
-*.orig.*
-web-build/
-
-# macOS
-.DS_Store
-
-# Temporary files created by Metro to check the health of the file watcher
-.metro-health-check*
+/**
+ * This .gitignore file specifies intentionally untracked files that Git should ignore.
+ * It is used to exclude certain files and directories from being tracked by Git.
+ * The following patterns are specified in this file:
+ * 
+ * - node_modules/: Excludes the "node_modules" directory and its contents.
+ * - .expo/: Excludes the ".expo" directory and its contents.
+ * - dist/: Excludes the "dist" directory and its contents.
+ * - npm-debug.*: Excludes any file starting with "npm-debug.".
+ * - *.jks: Excludes any file with the extension ".jks".
+ * - *.p8: Excludes any file with the extension ".p8".
+ * - *.p12: Excludes any file with the extension ".p12".
+ * - *.key: Excludes any file with the extension ".key".
+ * - *.mobileprovision: Excludes any file with the extension ".mobileprovision".
+ * - *.orig.*: Excludes any file with the extension ".orig.".
+ * - web-build/: Excludes the "web-build" directory and its contents.
+ * - .DS_Store: Excludes the ".DS_Store" file (created by macOS).
+ * - .metro-health-check*: Excludes temporary files created by Metro to check the health of the file watcher.
+ */

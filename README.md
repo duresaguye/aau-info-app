@@ -7,7 +7,7 @@ Features
     Study Resources: Access study materials, assignments, and resources shared by instructors.
     Interactive Interface: User-friendly interface for easy navigation and information retrieval.
     Community Engagement: Foster community interaction through forums, announcements, and events.
-<img src="https://github.com/duresaguye/aau-info-app/assets/129600771/a6957ccd-bce6-49ab-8ecc-e87c4ec648e0" alt="image" style="width:500px;height:500px;">
+<img src="https://github.com/duresaguye/aau-info-app/assets/129600771/a6957ccd-bce6-49ab-8ecc-e87c4ec648e0" alt="image" style="width:300px;height:200px;">
 <img src="https://github.com/duresaguye/aau-info-app/assets/129600771/0e610cba-3eb5-4e84-b784-7c361d829e18" alt="image" style="width:300px;height:300px;">
 <img src="https://github.com/duresaguye/aau-info-app/assets/129600771/0b968f3d-3512-41b5-913a-3ceddb4893ca" alt="image" style="width:300px;height:300px;">
 <img src="https://github.com/duresaguye/aau-info-app/assets/129600771/93d9bae4-a915-4e3b-931c-8b67699ef1f2" alt="image" style="width:300px;height:300px;">

@@ -1,12 +1,19 @@
 AAHub
 
-AAHub is a platform designed to provide information and resources related to Addis Ababa University (AAU). It aims to centralize departmental information, course details, and study resources for students and faculty members.
-Features <br>
-    Department Information: Access detailed information about various departments within AAU.<br>
-    Course Details: View course offerings, syllabi, and instructor details for each department.<br>
-    Study Resources: Access study materials, assignments, and resources shared by instructors.<br>
-    Interactive Interface: User-friendly interface for easy navigation and information retrieval.<br>
-    Community Engagement: Foster community interaction through forums, announcements, and events.<br>
+AAHub is a mobile app built using React Native, designed for Addis Ababa University (AAU). It centralizes departmental information, course details, and study resources.
+Features
 
+    Department Info: Comprehensive details about AAU departments.
+    Course Details: Syllabi, schedules, and instructor info.
+    Study Resources: Access to materials, assignments, and instructor-shared content.
+    Interactive Interface: Easy navigation and user-friendly design.
+   
 
+Future Plans
 
+AAHub will evolve into an AAU social media app with:
+
+    Social Interaction: User profiles and direct messaging.
+    Activity Feeds: Real-time updates on campus events and news.
+    Groups and Forums: Interest-based groups and discussions.
+    Event Management: Tools for organizing and promoting events.
